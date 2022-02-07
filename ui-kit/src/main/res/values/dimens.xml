@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="insetStandard">8dp</dimen>
+    <dimen name="insetSmall">6dp</dimen>
+</resources>

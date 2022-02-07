@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ui-kit</string>
+    <string name="vehicle_image">Vehicle Image</string>
+    <string name="call_dealer">Call Dealer</string>
+    <string name="call_dealership">Call Dealership</string>
+    <string name="mileage_format">%s mi</string>
+    <string name="mileage_format_thousandths">%sk mi</string>
+    <string name="location_format">%s, %s</string>
+    <string name="price_format">$ %s</string>
 </resources>

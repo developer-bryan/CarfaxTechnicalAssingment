@@ -38,6 +38,7 @@ android {
 
 dependencies {
     implementation project(':ui-kit')
+    implementation project(':overview')
 
     implementation arch_deps.ktxcore
     implementation arch_deps.ktxLivedata
