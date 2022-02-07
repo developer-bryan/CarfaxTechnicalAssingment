@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.bryanmills.details"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation arch_deps.appcompat
+    implementation arch_deps.ktxcore
+    implementation arch_deps.ktxLivedata
+    implementation arch_deps.ktxViewmodel
+    implementation arch_deps.navigationFragment
+    implementation arch_deps.navigationUi
+    implementation arch_deps.hilt
+    kapt arch_deps.hiltAnnotation
+
+    implementation ui_deps.material
+    implementation ui_deps.constraintLayout
+
+    testImplementation testing_deps.junit
+    testImplementation testing_deps.androidxjunit
+    testImplementation testing_deps.mockito
+}

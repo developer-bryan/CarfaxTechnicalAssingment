@@ -1,0 +1,49 @@
+ext {
+    def appcompat_version = "1.4.0"
+    def ktxcore_version = "1.7.0"
+    def room_version = "2.3.0"
+    def navigation_version = "2.5.0-alpha01"
+    def hilt_version = "2.38.1"
+    def ktx_livedata = "2.4.0"
+    def ktx_viewmodel = "2.4.0"
+    def gson = "2.8.9"
+
+    def material_version = "1.4.0"
+    def constraint_layout = "2.1.2"
+
+    def junit_version = "4.12"
+    def androidxjunit_version = "1.1.2"
+    def mockito_version = "2.9.0"
+
+    arch_deps = [
+            'appcompat'         : "androidx.appcompat:appcompat:$appcompat_version",
+            'ktxcore'           : "androidx.core:core-ktx:$ktxcore_version",
+
+            'ktxLivedata'       : "androidx.lifecycle:lifecycle-livedata-ktx:$ktx_livedata",
+            'ktxViewmodel'      : "androidx.lifecycle:lifecycle-viewmodel-ktx:$ktx_viewmodel",
+
+            'room'              : "androidx.room:room-runtime:$room_version",
+            'roomAnnotations'   : "androidx.room:room-compiler:$room_version",
+            'roomKtx'           : "androidx.room:room-ktx:2.2.5",
+
+            'hilt'              : "com.google.dagger:hilt-android:$hilt_version",
+            'hiltAnnotation'    : "com.google.dagger:hilt-android-compiler:$hilt_version",
+
+            'navigationFragment': "androidx.navigation:navigation-fragment-ktx:$navigation_version",
+            'navigationUi'      : "androidx.navigation:navigation-ui-ktx:$navigation_version",
+
+            'json'              : "com.google.code.gson:gson:$gson",
+    ]
+
+    ui_deps = [
+            'material'        : "com.google.android.material:material:$material_version",
+            'constraintLayout': "androidx.constraintlayout:constraintlayout:$constraint_layout",
+    ]
+
+    testing_deps = [
+            'junit'        : "junit:junit:$junit_version",
+            'androidxjunit': "androidx.test.ext:junit:$androidxjunit_version",
+            'mockito'      : "org.mockito:mockito-core:$mockito_version"
+    ]
+
+}
