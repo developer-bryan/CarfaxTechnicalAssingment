@@ -37,7 +37,8 @@ android {
 }
 
 dependencies {
-    implementation arch_deps.appcompat
+    implementation project(':ui-kit')
+
     implementation arch_deps.ktxcore
     implementation arch_deps.ktxLivedata
     implementation arch_deps.ktxViewmodel
@@ -45,9 +46,6 @@ dependencies {
     implementation arch_deps.navigationUi
     implementation arch_deps.hilt
     kapt arch_deps.hiltAnnotation
-
-    implementation ui_deps.material
-    implementation ui_deps.constraintLayout
 
     testImplementation testing_deps.junit
     testImplementation testing_deps.androidxjunit

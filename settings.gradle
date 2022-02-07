@@ -10,3 +10,4 @@ rootProject.name = "CarfaxTechnicalAssigment"
 include ':app'
 include ':overview'
 include ':details'
+include ':ui-kit'

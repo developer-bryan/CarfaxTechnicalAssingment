@@ -1,8 +1,6 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -30,23 +28,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding true
-    }
 }
 
 dependencies {
-    implementation project(':ui-kit')
-
-    implementation arch_deps.ktxcore
-    implementation arch_deps.ktxLivedata
-    implementation arch_deps.ktxViewmodel
-    implementation arch_deps.navigationFragment
-    implementation arch_deps.navigationUi
-    implementation arch_deps.hilt
-    kapt arch_deps.hiltAnnotation
-
-    testImplementation testing_deps.junit
-    testImplementation testing_deps.androidxjunit
-    testImplementation testing_deps.mockito
+    api arch_deps.appcompat
+    api ui_deps.material
+    api ui_deps.constraintLayout
 }
