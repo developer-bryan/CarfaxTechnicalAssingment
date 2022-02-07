@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ui-kit</string>
+    <string name="app_name">core</string>
     <string name="vehicle_image">Vehicle Image</string>
     <string name="call_dealer">Call Dealer</string>
     <string name="call_dealership">Call Dealership</string>
