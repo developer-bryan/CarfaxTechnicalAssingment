@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import androidx.annotation.StringRes
 import com.bryanmills.core.R
 import com.bryanmills.core.models.Listings
 import java.lang.Exception
@@ -11,8 +12,19 @@ import java.lang.NumberFormatException
 import java.text.NumberFormat
 
 fun Listings.createLocation(context: Context): String {
-    val location = String.format(context.getString(R.string.location_format), dealer?.city ?: "", dealer?.state ?: "")
-    return location
+
+    val city = dealer?.city
+    val state = dealer?.state
+
+    val hasCityData = !city.isNullOrBlank()
+    val hasStateData = !state.isNullOrBlank()
+
+    return when {
+        !hasCityData && hasStateData -> state!!
+        hasCityData && !hasStateData -> city!!
+        hasCityData && hasStateData -> String.format(context.getString(R.string.location_format), city ?: "", state ?: "")
+        else -> ""
+    }
 }
 
 fun Listings.createTitle() = "${year?.toString() ?: ""} ${make ?: ""} ${model ?: ""} ${trim ?: ""}"
@@ -28,7 +40,9 @@ fun Listings.formattedPrice(context: Context): String = try {
 
 fun Listings.formattedMileage(context: Context): String = try {
     val currency = NumberFormat.getInstance().format(mileage)
-    String.format(context.getString(R.string.price_format), currency)
+    @StringRes
+    val formatRes = if (mileage!! >= 1000) R.string.mileage_format_thousandths else R.string.mileage_format
+    String.format(context.getString(formatRes, currency))
 } catch (e: Exception) {
     ""
 }

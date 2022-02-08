@@ -17,6 +17,7 @@ ext {
     def junit_version = "4.12"
     def androidxjunit_version = "1.1.2"
     def mockito_version = "2.9.0"
+    def robolectric_version = "4.6"
 
     arch_deps = [
             'appcompat'         : "androidx.appcompat:appcompat:$appcompat_version",
@@ -54,7 +55,8 @@ ext {
     testing_deps = [
             'junit'        : "junit:junit:$junit_version",
             'androidxjunit': "androidx.test.ext:junit:$androidxjunit_version",
-            'mockito'      : "org.mockito:mockito-core:$mockito_version"
+            'mockito'      : "org.mockito:mockito-core:$mockito_version",
+            'robolectric'  : "org.robolectric:robolectric:$robolectric_version"
     ]
 
 }

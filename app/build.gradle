@@ -37,6 +37,11 @@ android {
     hilt {
         enableExperimentalClasspathAggregation = true
     }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -55,4 +60,5 @@ dependencies {
     testImplementation testing_deps.junit
     testImplementation testing_deps.androidxjunit
     testImplementation testing_deps.mockito
+    testImplementation testing_deps.robolectric
 }
