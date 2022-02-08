@@ -35,7 +35,7 @@ class FragmentVehicleDetails : Fragment(R.layout.fragment_vehicle_details) {
             title.text = listings.createTitle()
             price.text = listings.formattedPrice(requireContext())
             mileage.text = listings.formattedMileage(requireContext())
-            Picasso.get().load(listings.headerPhoto()).into(image)
+            Picasso.get().load(listings.headerPhoto()).error(R.drawable.default_car_image).into(image)
             binding?.button?.setOnClickListener {
                 listings.phoneNumber()?.let { requireContext().dialNumber(it) }
             }

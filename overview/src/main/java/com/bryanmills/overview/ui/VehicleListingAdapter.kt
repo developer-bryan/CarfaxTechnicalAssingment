@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bryanmills.core.models.Listings
 import com.bryanmills.core.utils.*
+import com.bryanmills.overview.R
 import com.bryanmills.overview.databinding.ListItemCarListingBinding
 import com.squareup.picasso.Picasso
 import javax.inject.Inject
@@ -67,7 +68,7 @@ class VehicleListingAdapter @Inject constructor() :
                 this.location.text = location
                 this.price.text = price
                 this.mileage.text = mileage
-                Picasso.get().load(headerImage).into(image)
+                Picasso.get().load(headerImage).error(R.drawable.default_car_image).into(image)
             }
         }
     }
