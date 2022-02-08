@@ -45,6 +45,17 @@ dependencies {
     implementation arch_deps.navigationUi
     implementation arch_deps.hilt
     kapt arch_deps.hiltAnnotation
+    implementation arch_deps.room
+    implementation arch_deps.roomRx
+    kapt arch_deps.roomAnnotations
+    kapt arch_deps.json
+    implementation arch_deps.rxJava
+    implementation arch_deps.rxAndroid
+    implementation arch_deps.retrofit
+    implementation arch_deps.retrofitGson
+    implementation arch_deps.retrofitRx
+
+    implementation ui_deps.picasso
 
     testImplementation testing_deps.junit
     testImplementation testing_deps.androidxjunit

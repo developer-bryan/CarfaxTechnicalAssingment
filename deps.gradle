@@ -7,7 +7,10 @@ ext {
     def ktx_livedata = "2.4.0"
     def ktx_viewmodel = "2.4.0"
     def gson = "2.8.9"
+    def rx_java = "3.0.0"
+    def retrofit = "2.9.0"
 
+    def picasso = "2.8"
     def material_version = "1.4.0"
     def constraint_layout = "2.1.2"
 
@@ -24,20 +27,28 @@ ext {
 
             'room'              : "androidx.room:room-runtime:$room_version",
             'roomAnnotations'   : "androidx.room:room-compiler:$room_version",
-            'roomKtx'           : "androidx.room:room-ktx:2.2.5",
+            'roomRx'            : "androidx.room:room-rxjava3:$room_version",
 
             'hilt'              : "com.google.dagger:hilt-android:$hilt_version",
-            'hiltAnnotation'    : "com.google.dagger:hilt-android-compiler:$hilt_version",
+            'hiltAnnotation'    : "com.google.dagger:hilt-compiler:$hilt_version",
 
             'navigationFragment': "androidx.navigation:navigation-fragment-ktx:$navigation_version",
             'navigationUi'      : "androidx.navigation:navigation-ui-ktx:$navigation_version",
 
             'json'              : "com.google.code.gson:gson:$gson",
+
+            'rxJava'            : "io.reactivex.rxjava3:rxjava:$rx_java",
+            'rxAndroid'         : "io.reactivex.rxjava3:rxandroid:$rx_java",
+
+            'retrofit'          : "com.squareup.retrofit2:retrofit:$retrofit",
+            'retrofitGson'      : "com.squareup.retrofit2:converter-gson:$retrofit",
+            'retrofitRx'        : "com.squareup.retrofit2:adapter-rxjava3:$retrofit"
     ]
 
     ui_deps = [
             'material'        : "com.google.android.material:material:$material_version",
             'constraintLayout': "androidx.constraintlayout:constraintlayout:$constraint_layout",
+            'picasso'         : "com.squareup.picasso:picasso:$picasso"
     ]
 
     testing_deps = [

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -34,4 +35,6 @@ dependencies {
     api arch_deps.appcompat
     api ui_deps.material
     api ui_deps.constraintLayout
+    implementation arch_deps.room
+    kapt arch_deps.roomAnnotations
 }
