@@ -12,7 +12,6 @@ import com.bryanmills.core.viewmodel.SelectedItemViewModel
 import com.bryanmills.overview.R
 import com.bryanmills.overview.viewmodel.VehicleListingsViewmodel
 import dagger.hilt.android.AndroidEntryPoint
-import java.nio.channels.Selector
 import javax.inject.Inject
 
 @AndroidEntryPoint

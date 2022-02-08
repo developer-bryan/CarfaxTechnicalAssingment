@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bryanmills.ui.KeyValueView
+        android:id="@+id/locationBreakdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelValue="@string/location" />
+
+    <com.bryanmills.ui.KeyValueView
+        android:id="@+id/exteriorColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelValue="@string/exterior_color" />
+
+    <com.bryanmills.ui.KeyValueView
+        android:id="@+id/interiorColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelValue="@string/interior_color" />
+
+    <com.bryanmills.ui.KeyValueView
+        android:id="@+id/driveType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelValue="@string/drive_type" />
+
+    <com.bryanmills.ui.KeyValueView
+        android:id="@+id/trans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelValue="@string/transmission" />
+
+    <com.bryanmills.ui.KeyValueView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelValue="@string/body_style" />
+
+    <com.bryanmills.ui.KeyValueView
+        android:id="@+id/engine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelValue="@string/engine" />
+
+    <com.bryanmills.ui.KeyValueView
+        android:id="@+id/fuel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelValue="@string/fuel" />
+
+</LinearLayout>

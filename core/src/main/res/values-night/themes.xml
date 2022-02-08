@@ -7,7 +7,12 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <item name="xInsetStandard">@dimen/insetStandard</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="xInsetExtraSmall">@dimen/insetExtraSmall</item>
         <item name="xInsetSmall">@dimen/insetSmall</item>
+        <item name="xInsetStandard">@dimen/insetStandard</item>
+        <item name="xInsetLarge">@dimen/insetLarge</item>
+        <item name="xInsetExtraLarge">@dimen/insetExtraLarge</item>
+        <item name="textColorLabel">@android:color/darker_gray</item>
     </style>
 </resources>

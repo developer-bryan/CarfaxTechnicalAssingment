@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="insetLarge">12dp</dimen>
     <dimen name="insetStandard">8dp</dimen>
     <dimen name="insetSmall">6dp</dimen>
+    <dimen name="insetExtraSmall">4dp</dimen>
+    <dimen name="insetExtraLarge">24dp</dimen>
 </resources>

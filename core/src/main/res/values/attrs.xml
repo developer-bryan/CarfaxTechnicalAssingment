@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="xInsetExtraSmall" format="dimension"/>
     <attr name="xInsetSmall" format="dimension"/>
     <attr name="xInsetStandard" format="dimension"/>
+    <attr name="xInsetLarge" format="dimension"/>
+    <attr name="xInsetExtraLarge" format="dimension"/>
+    <attr name="textColorLabel" format="color"/>
 </resources>
