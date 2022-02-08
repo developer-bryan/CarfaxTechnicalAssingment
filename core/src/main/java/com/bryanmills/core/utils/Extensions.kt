@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import com.bryanmills.core.R
 import com.bryanmills.core.models.Listings
+import java.lang.Exception
 import java.lang.NumberFormatException
 import java.text.NumberFormat
 
@@ -21,18 +22,20 @@ fun Listings.headerPhoto(): String? = images?.firstPhoto?.large
 fun Listings.formattedPrice(context: Context): String = try {
     val currency = NumberFormat.getInstance().format(currentPrice)
     String.format(context.getString(R.string.price_format), currency)
-} catch (e: NumberFormatException) {
+} catch (e: Exception) {
     ""
 }
 
 fun Listings.formattedMileage(context: Context): String = try {
     val currency = NumberFormat.getInstance().format(mileage)
     String.format(context.getString(R.string.price_format), currency)
-} catch (e: NumberFormatException) {
+} catch (e: Exception) {
     ""
 }
 
 fun Listings.phoneNumber() = dealer?.phone
+
+fun Listings.createEngineAndDisplacement() = "$engine $displacement"
 
 fun Context.dialNumber(phoneNumber: String) {
     if (packageManager.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
