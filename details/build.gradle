@@ -39,12 +39,11 @@ dependencies {
     implementation project(':core')
 
     implementation arch_deps.ktxcore
-    implementation arch_deps.ktxLivedata
-    implementation arch_deps.ktxViewmodel
     implementation arch_deps.navigationFragment
-    implementation arch_deps.navigationUi
     implementation arch_deps.hilt
     kapt arch_deps.hiltAnnotation
+
+    implementation ui_deps.picasso
 
     testImplementation testing_deps.junit
     testImplementation testing_deps.androidxjunit

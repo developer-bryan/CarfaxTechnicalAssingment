@@ -17,6 +17,8 @@ class VehicleListingAdapter @Inject constructor() :
 
     private var inflater: LayoutInflater? = null
 
+    var clickListener: ((Listings) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarViewHolder {
         if (inflater == null) {
             inflater = LayoutInflater.from(parent.context)
@@ -31,6 +33,9 @@ class VehicleListingAdapter @Inject constructor() :
         with(holder) {
             binding?.button?.setOnClickListener {
                 data.phoneNumber()?.let { phoneNumber -> holder.itemView.context.dialNumber(phoneNumber) }
+            }
+            binding?.container?.setOnClickListener {
+                clickListener?.invoke(data)
             }
             bind(data)
         }

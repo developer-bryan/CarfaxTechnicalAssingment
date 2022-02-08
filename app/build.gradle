@@ -42,6 +42,7 @@ android {
 dependencies {
     implementation project(':core')
     implementation project(':overview')
+    implementation project(':details')
 
     implementation arch_deps.ktxcore
     implementation arch_deps.ktxLivedata

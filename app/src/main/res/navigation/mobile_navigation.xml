@@ -8,6 +8,15 @@
     <fragment
         android:id="@+id/fragment_overview"
         android:name="com.bryanmills.overview.ui.FragmentVehicleListings"
-        tools:layout="@layout/fragment_vehicle_listings" />
+        tools:layout="@layout/fragment_vehicle_listings">
+        <action
+            android:id="@id/navigateToDetails"
+            app:destination="@id/fragment_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_details"
+        android:name="com.bryanmills.ui.FragmentVehicleDetails"
+        tools:layout="@layout/fragment_vehicle_details" />
 
 </navigation>

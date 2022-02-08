@@ -8,4 +8,5 @@
     <item name="button" type="id"/>
     <item name="dividerVertical" type="id"/>
     <item name="dividerHorizontal" type="id"/>
+    <item name="navigateToDetails" type="id"/>
 </resources>
